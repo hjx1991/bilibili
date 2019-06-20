@@ -13,7 +13,6 @@ def hello_world():
 def hjx(id):
     return  render_template('base.html',id = id)
 
-
 @app.route('/login/')
 def login():
     return  render_template('login.html')
@@ -26,7 +25,7 @@ def pushfile():
 def test():
     if request.method == 'POST':
         f = request.files['file']
-        f.save(r'D:\\%s'% f.filename)
+        # f.save(r'D:\\%s'% f.filename)
         return 'ok'
     else:
         return redirect(request.url)
