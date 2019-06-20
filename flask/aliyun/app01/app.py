@@ -1,5 +1,5 @@
 from flask import Flask , request , sessions , g ,url_for , abort , render_template ,flash
-from aliyun.app01 import config
+from . import config
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -17,4 +17,4 @@ def hjx(id):
 def login():
     return  render_template('login.html')
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=5000)
