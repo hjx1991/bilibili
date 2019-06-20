@@ -1,4 +1,4 @@
-from flask import Flask , request , sessions , g ,url_for , abort , render_template ,flash,redirect
+from flask import Flask , request , sessions , g ,url_for , abort , render_template ,flash,redirect,session
 from . import config
 import os
 
@@ -7,7 +7,9 @@ app.config.from_object(config)
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    session['username']='hjx'
+    print(session['username'])
+    return redirect(url_for('login'))
 
 @app.route('/hjx/<id>')
 def hjx(id):
