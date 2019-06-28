@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login_regist.css') }}">
+{% endblock %}
+
+{% block title %}主页{% endblock %}
+{% block regist%}
+<ul class="nav navbar-nav">
+                    <li class="active"><a href="{{url_for('regist')}}">退出<span class="sr-only">(current)</span></a></li>
+</ul>
+{%endblock%}
+{% block main %}
+    <h3 class="page-title">毛哥直播ppppp</h3>
+
+{% endblock %}

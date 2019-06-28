@@ -12,7 +12,7 @@
 {%endblock%}
 {% block main %}
     <h3 class="page-title">登录</h3>
-    <form action="" method="post">
+    <form action="{{url_for('home')}}" method="post">
         <div class="form-container">
             <div class="form-group">
                 <input type="text" name="telephone" placeholder="手机号码" class="form-control">

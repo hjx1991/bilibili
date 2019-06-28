@@ -55,7 +55,7 @@ def regist():
             db.session.commit()
             return redirect(url_for('login'))
 
-@app.route('/test/',methods=['post'])
+@app.route('/test/',methods=['POST'])
 def test():
     if request.method == 'POST':
         f = request.files['file']
@@ -64,5 +64,8 @@ def test():
     else:
         return redirect(request.url)
 
+@app.route('/home/',methods=['GET','POST'])
+def home():
+    return render_template('home.html')
 if __name__ == '__main__':
-    app.run(debug=True,port=5000)
+    app.run(port=5000,host='0.0.0.0')

@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cd3a85-163a-4d57-b170-87a287820830" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/decorator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/exts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/css/detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/css/login_regist.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/css/question.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/pine.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/zhiliao.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/zhiliaologo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/templates/regist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql_connetct.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aliyun/app01/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aliyun/app01/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliyun/app01/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliyun/app01/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aliyun/app01/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliyun/disk_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/disk_init.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aliyun/app01/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="43" column="10" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="10" />
+            <state relative-caret-position="418">
+              <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
               <folding>
                 <element signature="e#0#107#0" expanded="true" />
               </folding>
@@ -86,20 +66,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aliyun/app01/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="465">
+              <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
               <folding>
                 <element signature="e#48#67#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/python3.7/Lib/site-packages/django/contrib/auth/base_user.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1087">
-              <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -109,18 +80,22 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aliyun/app01/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+            <state relative-caret-position="179">
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aliyun/app01/static/css/index.css">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/aliyun/app01/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -129,8 +104,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -168,9 +143,10 @@
         <option value="$PROJECT_DIR$/aliyun/app01/config.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/aliyun/app01/models.py" />
-        <option value="$PROJECT_DIR$/aliyun/app01/app.py" />
         <option value="$PROJECT_DIR$/aliyun/app01/templates/base.html" />
+        <option value="$PROJECT_DIR$/aliyun/app01/templates/home.html" />
         <option value="$PROJECT_DIR$/aliyun/app01/templates/login.html" />
+        <option value="$PROJECT_DIR$/aliyun/app01/app.py" />
       </list>
     </option>
   </component>
@@ -364,12 +340,12 @@
       <workItem from="1561541709058" duration="3325000" />
       <workItem from="1561601405101" duration="11700000" />
       <workItem from="1561629844936" duration="3512000" />
-      <workItem from="1561688374782" duration="15466000" />
+      <workItem from="1561688374782" duration="17080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88088000" />
+    <option name="totallyTimeSpent" value="89702000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -384,12 +360,12 @@
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19989339" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19989339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27440348" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38177875" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -412,7 +388,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/flask$test.coverage" NAME="test Coverage Results" MODIFIED="1561707527836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/flask$Flask__aliyun_app01_app_py_.coverage" NAME="Flask (aliyun/app01/app.py) Coverage Results" MODIFIED="1561714409334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask$Flask__aliyun_app01_app_py_.coverage" NAME="Flask (aliyun/app01/app.py) Coverage Results" MODIFIED="1561716063402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask$flask.coverage" NAME="flask Coverage Results" MODIFIED="1561441808530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask$echo_fstab.coverage" NAME="echo_fstab Coverage Results" MODIFIED="1561542173195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -463,9 +439,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aliyun/app01/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://D:/python3.7/Lib/site-packages/wtforms/form.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -536,13 +509,6 @@
     <entry file="file://$PROJECT_DIR$/aliyun/app01/static/css/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/aliyun/app01/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/python3.7/Lib/site-packages/django/contrib/auth/base_user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1087">
@@ -564,6 +530,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aliyun/app01/static/css/login_regist.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/aliyun/app01/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -571,33 +540,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aliyun/app01/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="43" column="10" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aliyun/app01/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="31" column="22" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="22" />
+        <state relative-caret-position="465">
+          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
           <folding>
             <element signature="e#48#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aliyun/app01/static/css/login_regist.css">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/aliyun/app01/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aliyun/app01/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aliyun/app01/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        <state relative-caret-position="179">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aliyun/app01/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aliyun/app01/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#107#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
