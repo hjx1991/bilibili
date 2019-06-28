@@ -9,10 +9,14 @@ import datetime
 os.system('cp /etc/fstab /data/fstab.bak')
 sas = []
 ssd = []
+#分区:UUID
 ssd_kv = {}
 sas_kv = {}
+sas_list=[]
+ssd_list=[]
 data = datetime.datetime.now().strftime('%Y-%m-%d')
 '''本脚本只对没挂载的磁盘进行初始化磁盘挂载,已挂载的目录先手动umount'''
+
 class bcache_disk_init:
     '''载入变量'''
     def __init__(self):
@@ -45,15 +49,11 @@ class bcache_disk_init:
                 result = os.system('mkdir -p /data/bcache/L3/disk0%d && mount -t xfs %s /data/bcache/L3/disk0%d' % (n,sas[n],n))
                 if result != 0:
                     print('mkdir -p /data/bcache/L3/disk0%d && mount -t xfs %s /data/bcache/L3/disk0%d' % (n,sas[n],n))
+                sas_list.append('/data/bcache/L3/disk0%d' % n)
                 if n >= 10:
                     result = os.system('mkdir -p /data/bcache/L3/disk%d && mount -t xfs %s /data/bcache/L3/disk%d' % (n, sas[n], n))
                     if result != 0:
                         print('mkdir -p /data/bcache/L3/disk0%d && mount -t xfs %s /data/bcache/L3/disk0%d' % (n, sas[n], n))
-            for fstab in sas:
-                os.system('echo #%s' % data)
-                result = os.system('echo "%s  %s xfs defaults,nofail,noatime,nodiratime  0  0 #%s ">> /etc/fstab' % (sas_kv[fstab], fstab, fstab))
-                if result != 0:
-                    print('echo "%s  %s xfs defaults,nofail,noatime,nodiratime  0  0 #%s ">> /etc/fstab' % (sas_kv[fstab], fstab, fstab))
         except Exception as e:
             print(e)
             sys.exit()
@@ -63,12 +63,10 @@ class bcache_disk_init:
             os.system(self.LOAD_XFS)
             for disk in self.information_str_list:
                 disk_list = disk.split(' ')
-                # print(len(disk_list),disk_list[0],disk_list[1])
                 '''disk_list =['/dev/nvme0n1:','UUID=xx','TYPE="xfs"'] 系统盘多项PARTUUID'''
                 if len(disk_list) and'/dev/nvme' in disk_list[0]:
                     '''加入字典作写入fstab'''
                     ssd_kv[disk_list[0][:-1]] = disk_list[1]
-
                     '''添加list作排序'''
                     ssd.append(disk_list[0][:-1])
                     print(ssd_kv,ssd)
@@ -83,14 +81,13 @@ class bcache_disk_init:
                 result = os.system('mkdir -p /data/bcache/L2/disk0%d && mount -t xfs %s /data/bcache/L2/disk0%d' % (n,ssd[n], n))
                 if result != 0:
                     print('mkdir -p /data/bcache/L2/disk0%d && mount -t xfs %s /data/bcache/L2/disk0%d' % (n, ssd[n],n))
-            for fstab in ssd:
-                os.system('echo #%s' % data)
-                result = os.system('echo "%s %s xfs defaults,nofail,noatime,nodiratime  0  0 #%s ">> /etc/fstab' % (ssd_kv[fstab], fstab, fstab))
-                if result != 0:
-                    print('echo "%s %s xfs defaults,nofail,noatime,nodiratime  0  0 #%s ">> /etc/fstab' % (ssd_kv[fstab], fstab, fstab))
+                ssd_list.append('/data/bcache/L2/disk0%d'%n)
         except Exception as e:
             print(e)
             sys.exit()
+    def echo_fstab(self):
+        os.system('echo #%s >> /etc/fstab' % data)
+
 
 if __name__ == '__main__':
 
