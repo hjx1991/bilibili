@@ -13,13 +13,13 @@ class UserModel(db.Model):
     telephone = db.Column(db.String(11),nullable=False)
     _password = db.Column(db.String(128),nullable=False)
 
-    def __init__(self, *args, **kwargs):
-        password = kwargs.pop('password')
-        username = kwargs.pop('username')
-        telephone = kwargs.pop('telephone')
-        self.password = password
-        self.username = username
-        self.telephone = telephone
+    # def __init__(self, *args, **kwargs):
+    #     password = kwargs.pop('password')
+    #     username = kwargs.pop('username')
+    #     telephone = kwargs.pop('telephone')
+    #     self.password = password
+    #     self.username = username
+    #     self.telephone = telephone
 
     @property
     def password(self):
