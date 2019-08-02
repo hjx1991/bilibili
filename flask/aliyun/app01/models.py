@@ -35,6 +35,6 @@ class UserModel(db.Model):
         return check_password_hash(self._password, rawpwd)
 
 '''
-第一次建表是  python manage.py db init/migrate/upgrade
+第一次        python manage.py db init/migrate/upgrade
 第二次        python manage.py db migrate/upgrade
 '''

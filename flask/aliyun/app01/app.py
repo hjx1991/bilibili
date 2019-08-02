@@ -5,28 +5,36 @@ from forms import RegistForm
 from flask_sqlalchemy import SQLAlchemy
 from decorator import login_required
 from models import UserModel
+# from flask_login import LoginManager
 
+
+# login_manager = LoginManager()
 app = Flask(__name__)
 app.config.from_object(config)
 db = SQLAlchemy(app)
 db.create_all()
+# login_manager.init_app(app)
 
 @app.route('/')
 def index():
+    # session.permanent = True
     # session['username']='hjx'
     # print(session)
     return redirect(url_for('login'))
 
 @app.route('/login/',methods = ['GET','POST'])
-# @login_required
 def login():
     if request.method == 'GET':
+        print('login get')
         return render_template('login.html')
     else:
+        print('login post')
         telephone = request.form.get('telephone')
         password = request.form.get('password')
         print(telephone,'\n',password)
         user = UserModel.query.filter_by(telephone=telephone).first()
+        username =UserModel.query.filter(UserModel.telephone==telephone).all()
+        print('username:',username.data)
         print('user:',user,type(user))
         if user:
             print('true')
@@ -65,7 +73,10 @@ def test():
         return redirect(request.url)
 
 @app.route('/home/',methods=['GET','POST'])
+
 def home():
+
     return render_template('home.html')
+
 if __name__ == '__main__':
     app.run(port=5000,host='0.0.0.0')

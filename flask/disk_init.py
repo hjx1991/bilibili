@@ -6,6 +6,7 @@ import subprocess
 import sys
 import os
 import datetime
+os.system('apt-get install -y  python3-pip python3 packagename')
 os.system('cp /etc/fstab /data/fstab.bak')
 sas = []
 ssd = []
@@ -16,7 +17,15 @@ sas_list=[]
 ssd_list=[]
 data = datetime.datetime.now().strftime('%Y-%m-%d')
 '''本脚本只对没挂载的磁盘进行初始化磁盘挂载,已挂载的目录先手动umount'''
+def ssd():
+    cmd="fdisk -l|grep Disk |grep nvme|awk '{print $2}'|awk -F: '{print $1}'"
+    subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    out, err = req.communicate()
+    information = str(out,encoding='utf-8').strip()
+    information_str_list=information.strip('\n')
+    for disk in information_str_list:
 
+    return information_str_list
 class bcache_disk_init:
     '''载入变量'''
     def __init__(self):
@@ -61,10 +70,10 @@ class bcache_disk_init:
     def ssd_disk(self):
         try:
             os.system(self.LOAD_XFS)
-            for disk in self.information_str_list:
-                disk_list = disk.split(' ')
-                '''disk_list =['/dev/nvme0n1:','UUID=xx','TYPE="xfs"'] 系统盘多项PARTUUID'''
-                if len(disk_list) and'/dev/nvme' in disk_list[0]:
+            information_str_list=ssd()
+            for disk in information_str_list:
+                '''['/dev/nvme1n1', '/dev/nvme0n1'] '''
+                if len(disk_list) and '/dev/nvme' in disk_list[0]:
                     '''加入字典作写入fstab'''
                     ssd_kv[disk_list[0][:-1]] = disk_list[1]
                     '''添加list作排序'''
@@ -85,8 +94,6 @@ class bcache_disk_init:
         except Exception as e:
             print(e)
             sys.exit()
-    def echo_fstab(self):
-        os.system('echo #%s >> /etc/fstab' % data)
 
 
 if __name__ == '__main__':
