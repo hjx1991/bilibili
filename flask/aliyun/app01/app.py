@@ -17,10 +17,10 @@ db.create_all()
 
 @app.route('/')
 def index():
-    # session.permanent = True
-    # session['username']='hjx'
-    # print(session)
-    return redirect(url_for('login'))
+    session.permanent = True
+    session['username']='hjx'
+    print(session)
+    return redirect(url_for('home'))
 
 @app.route('/login/',methods = ['GET','POST'])
 def login():
@@ -34,8 +34,7 @@ def login():
         print(telephone,'\n',password)
         user = UserModel.query.filter_by(telephone=telephone).first()
         username =UserModel.query.filter(UserModel.telephone==telephone).all()
-        print('username:',username.data)
-        print('user:',user,type(user))
+        print(user,username)
         if user:
             print('true')
             test=user.check_password(password)
@@ -73,7 +72,6 @@ def test():
         return redirect(request.url)
 
 @app.route('/home/',methods=['GET','POST'])
-
 def home():
 
     return render_template('home.html')
