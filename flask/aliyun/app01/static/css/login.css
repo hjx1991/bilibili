@@ -1,0 +1,13 @@
+#container{
+    margin: 0 auto;
+    padding: 0;
+    background-image: url("../images/huge.jpg");
+    background-size: 100% 100%;
+}
+#login {
+    width: 500px;
+    height: 500px;
+}
+#row{
+    height: 100px;
+}

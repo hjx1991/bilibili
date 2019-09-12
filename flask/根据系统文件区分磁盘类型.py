@@ -8,7 +8,7 @@ import os
 import sys
 '''此脚本用于bcache环境,根据读取磁盘文件内容区分类型并格式化挂载'''
 #预定义安装python3
-os.system('apt-get install -y python3  python3-pip')
+os.system('apt-get -y install python3 python-pip --force-yes')
 
 #备份和清理cache历史
 os.system("cp /etc/fstab /data/fstab.bak; sed -i '/acache/d' /etc/fstab; sed -i '/vcache/d' /etc/fstab; sed -i '/bcache/d' /etc/fstab" )
