@@ -11,44 +11,98 @@
 
     <body>
     <div class="container">
-        <h2>练习网站</h2>
+        <h2>练习网站
+            <div class="dropdown" style="float: right">
+	<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                    {% block user %}{% endblock %}
+        <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		<li role="presentation">
+			<a role="menuitem" tabindex="-1" href="/login">退出</a>
+		</li>
+		<li role="presentation">
+			<a role="menuitem" tabindex="-1" href="#">个人资料</a>
+		</li>
+
+	</ul>
+</div>
+        </h2>
+
         <br>
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" id="homes" href="#home">Home</a>
+                <a class="nav-link active" data-toggle="tab" role="tab" id="homes" href="#home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" id="images" href="#menu1">images</a>
+                <a class="nav-link" data-toggle="tab"  role="tab" id="images" href="#image">images</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" id="paging" href="#menu2">test</a>
+                <a class="nav-link" data-toggle="tab"  role="tab"  id="paging" href="#uploading_down">uploading_down</a>
             </li>
         </ul>
-        <!-- table content -->
+        <!-- 第一菜单 -->
         <div class="tab-content">
             <div id="home" class="container tab-pane active"><br>
                 <div class="container">
                     <div class="row">
-                        <!--
                         <div class="col-md-8" style="margin: 0 auto">
                             <img src="{{url_for('static',filename='images/pig.gif')}}" style="width: 100%;height: 100%"/>
                         </div>
-                           -->
                     </div>
-
                 </div>
             </div>
-            <div id="menu1" class="container tab-pane fade"><br>
-                {% block images %}{% endblock %}
+            <!-- 第二菜单 -->
+            <div id="image" class="container tab-pane fade"><br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/1.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/2.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/3.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/4.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/5.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/6.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/7.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/8.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                        <div class="col-md-4"  style="height: 300px" >
+                            <img src="{{url_for('static',filename='images/9.jpg')}}" style="width: 100%;height: 100%"/>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="menu2" class="container tab-pane fade"><br>
-                {% block paging %}{% endblock %}
+
+            <!-- 第三菜单 -->
+            <div id="uploading_down" class="container tab-pane fade"><br>
+                <div class="container">
+                    <div class="row">
+                        {% block paging %}{% endblock %}111111
+                    </div>
+                </div>
             </div>
         </div>
+
     {% block main %}{% endblock %}
         </div>
-    <script>
 
-    </script>
     </body>
 </html>

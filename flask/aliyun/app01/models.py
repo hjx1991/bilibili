@@ -6,12 +6,25 @@ from werkzeug.security import generate_password_hash,check_password_hash
 import shortuuid
 import datetime
 
+class ImageModel(db.Model):
+    __tablename__='img'
+    id = db.Column(db.Integer,primary_key=True,autoincrement=True)
+    img = db.Column(db.LargeBinary,nullable=False)
+    img_time = db.Column(db.DATETIME,default=datetime.datetime.now())
+
+    def __str__(self):
+        return "img"
+
 class UserModel(db.Model):
     __tablename__ = 'users'
     id =db.Column(db.Integer,primary_key=True,autoincrement=True)
     username = db.Column(db.String(100),nullable=False)
     telephone = db.Column(db.String(11),nullable=False)
     _password = db.Column(db.String(128),nullable=False)
+
+    def __str__(self):
+        return "users"
+
 
     # def __init__(self, *args, **kwargs):
     #     password = kwargs.pop('password')

@@ -39,10 +39,8 @@ def login():
     else:
         telephone = request.form.get('telephone')
         password = request.form.get('password')
-        print(telephone,password)
         user = UserModel.query.filter_by(telephone=telephone).first()
-        username =UserModel.query.filter(UserModel.telephone==telephone).all()
-        print(username)
+        # username =UserModel.query.filter(UserModel.telephone==telephone).all()
         if user:
             print("数据库用户名存在")
             test=user.check_password(password)
@@ -50,25 +48,26 @@ def login():
             session['id'] = user.id
             g.user = user
             session["username"]=telephone
-            print("session:",telephone)
-            return redirect(url_for('index',username=username))
+            print("session type:",type(telephone))
+
+
+            return render_template('index.html',username=user.username)
         else:
-            return u'用户名或密码错误！'
+            return u'用户名或密码错误!'
 
 @app.route('/home/',methods=["POST","GET"])
 def home():
     try:
         if session.get('username'):
-            return  render_template('images.html')
+            return  render_template('index.html')
     except KeyError as e:
         print(e)
         return render_template('login.html')
 
-@app.route('/images/',methods=["GET"])
+@app.route('/images/',methods=["GET","POST"])
 def images():
-    if request.method == 'GET':
-        pritn('跳转iamges.html')
-        return render_template('images.html')
+    print("login的数据函数:",user.username)
+    return render_template('index.html')
 # @app.route('/regist/',methods=['GET','POST'])
 # def regist():
 #     if request.method == 'GET':
@@ -95,7 +94,7 @@ def images():
 #
 # @app.route('/home/',methods=['GET','POST'])
 # def home():
-#     return render_template('images.html')
+#     return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(port=5000,host='0.0.0.0')
