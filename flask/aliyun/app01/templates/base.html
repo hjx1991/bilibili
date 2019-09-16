@@ -7,11 +7,18 @@
         <script src="{{ url_for('static',filename='js/jquery-3.4.1.min.js') }}"></script>
         <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
         <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>{% block head %}{% endblock %}
-        <title>{% block title %}{% endblock %}-后台管理系统</title></head>
+        <title>{% block title %}{% endblock %}-后台管理系统</title>
+        <embed   src="{{ url_for('static',filename='mp3/SHE.mp3') }}" hidden="true" autostart="true" loop="true" >
+
+    </head>
 
     <body>
     <div class="container">
-        <h2>练习网站
+        <h2>爱心小窝
+            <audio controls loop="loop"  autoplay="autoplay">
+                <source src="{{ url_for('static',filename='mp3/SHE.mp3') }}" type="audio/mpeg" style="margin: auto">
+                    您的浏览器不支持 audio 元素。
+            </audio>
             <div class="dropdown" style="float: right">
 	<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
                     {% block user %}{% endblock %}
@@ -57,36 +64,45 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/1.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/1.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/2.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/2.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/3.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/3.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/4.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/4.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/5.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/5.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/6.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/6.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/7.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/7.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/8.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/8.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                         <div class="col-md-4"  style="height: 300px" >
-                            <img src="{{url_for('static',filename='images/9.jpg')}}" style="width: 100%;height: 100%"/>
+                            <img src="{{url_for('static',filename='images/9.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
+                    </div>
+                    <div class="row" >
+                        <ul class="pagination" style="margin: auto;">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                      </ul>
                     </div>
                 </div>
             </div>
@@ -95,7 +111,7 @@
             <div id="uploading_down" class="container tab-pane fade"><br>
                 <div class="container">
                     <div class="row">
-                        {% block paging %}{% endblock %}111111
+                        {% block paging %}{% endblock %}上传下载功能页
                     </div>
                 </div>
             </div>

@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cd3a85-163a-4d57-b170-87a287820830" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/images/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aliyun/app01/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aliyun/app01/static/mp3/SHE.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliyun/app01/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliyun/app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aliyun/app01/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliyun/app01/templates/images.html" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/templates/uploading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aliyun/app01/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/aliyun/app01/templates/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/aliyun/app01/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1144">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#0#107#0" expanded="true" />
               </folding>
@@ -69,9 +56,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aliyun/app01/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+            <state relative-caret-position="83">
+              <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
               <folding>
+                <element signature="n#style#0;n#source#0;n#audio#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -93,6 +81,7 @@
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/aliyun/app01/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -198,8 +187,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1382" />
-    <option name="y" value="25" />
+    <option name="x" value="1325" />
+    <option name="y" value="88" />
     <option name="width" value="1937" />
     <option name="height" value="928" />
   </component>
@@ -243,7 +232,7 @@
               <item name="aliyun" type="462c0819:PsiDirectoryNode" />
               <item name="app01" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="mp3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flask" type="b2602c69:ProjectViewProjectNode" />
@@ -262,7 +251,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/aliyun/app01/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/aliyun/app01/static/mp3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -271,11 +260,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\bili\bilibili\flask\aliyun\app01\static\mp3" />
       <recent name="D:\bili\bilibili\flask\aliyun\app01\static\images" />
       <recent name="D:\bili\bilibili\flask\aliyun\app01\static\fonts" />
       <recent name="D:\bili\bilibili\flask\aliyun\app01\static\js" />
       <recent name="D:\bili\bilibili\flask\aliyun\app01\static\css" />
-      <recent name="D:\bili\bilibili\flask\aliyun\app01\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\bili\bilibili\flask\aliyun\app01\static\css\1" />
@@ -485,12 +474,12 @@
       <workItem from="1568191891324" duration="8791000" />
       <workItem from="1568201469065" duration="2474000" />
       <workItem from="1568255657251" duration="13864000" />
-      <workItem from="1568602912265" duration="18318000" />
+      <workItem from="1568602912265" duration="21463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293956000" />
+    <option name="totallyTimeSpent" value="297101000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -502,16 +491,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1382" y="25" width="1937" height="928" extended-state="0" />
+    <frame x="1325" y="88" width="1937" height="928" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="top" id="SciView" order="0" side_tool="true" weight="0.32830188" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18806607" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18806607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.52519596" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4857513" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994253" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -536,7 +525,7 @@
     <SUITE FILE_PATH="coverage/flask$test.coverage" NAME="test Coverage Results" MODIFIED="1561707527836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask$1.coverage" NAME="测试1 Coverage Results" MODIFIED="1566271091147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask$.coverage" NAME="测试 Coverage Results" MODIFIED="1564396073739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/flask$Flask__aliyun_app01_app_py_.coverage" NAME="Flask (aliyun/app01/app.py) Coverage Results" MODIFIED="1568632604696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask$Flask__aliyun_app01_app_py_.coverage" NAME="Flask (aliyun/app01/app.py) Coverage Results" MODIFIED="1568635244189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask$flask.coverage" NAME="flask Coverage Results" MODIFIED="1561441808530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask$echo_fstab.coverage" NAME="echo_fstab Coverage Results" MODIFIED="1561542173195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -788,7 +777,7 @@
     <entry file="file://$PROJECT_DIR$/aliyun/app01/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1144">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="e#0#107#0" expanded="true" />
           </folding>
@@ -805,7 +794,7 @@
     <entry file="file://$PROJECT_DIR$/aliyun/app01/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -818,9 +807,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aliyun/app01/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+        <state relative-caret-position="83">
+          <caret line="17" column="76" selection-start-line="17" selection-start-column="76" selection-end-line="17" selection-end-column="76" />
           <folding>
+            <element signature="n#style#0;n#source#0;n#audio#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#h2#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -842,6 +832,7 @@
             <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#2;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
