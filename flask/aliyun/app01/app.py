@@ -48,9 +48,7 @@ def login():
             g.user = user
             session["username"]=telephone
             print("session type:",type(telephone))
-            first='ok'
-            print(first)
-            return redirect(url_for('home',username=user.username,first=first))
+            return redirect(url_for('home',username=user.username))
         else:
             return u'用户名或密码错误=!'
 
