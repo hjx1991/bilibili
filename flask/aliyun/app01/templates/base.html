@@ -6,49 +6,50 @@
         <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
         <script src="{{ url_for('static',filename='js/jquery-3.4.1.min.js') }}"></script>
         <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-        <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>{% block head %}{% endblock %}
+        <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>{% block head %}{% endblock %}
         <title>{% block title %}{% endblock %}-后台管理系统</title>
+
     </head>
 
     <body>
     <div class="container">
-        <h2>爱心小窝
+        <h2>练习测试
             <audio controls loop="loop"  autoplay="autoplay">
                 <source src="{{ url_for('static',filename='mp3/SHE.mp3') }}" type="audio/mpeg" style="margin: auto">
                     您的浏览器不支持 audio 元素。
             </audio>
             <div class="dropdown" style="float: right">
-	<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-                    {% block user %}{% endblock %}
-        <span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-		<li role="presentation">
-			<a role="menuitem" tabindex="-1" href="/login">退出</a>
-		</li>
-		<li role="presentation">
-			<a role="menuitem" tabindex="-1" href="#">个人资料</a>
-		</li>
-
-	</ul>
-</div>
+                <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                                {% block user %}{% endblock %}
+                    <span class="caret"></span>
+                </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="/login">退出</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">个人资料</a>
+                </li>
+            </ul>
+            </div>
         </h2>
 
         <br>
         <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" role="tab" id="homes" href="#home">Home</a>
+            <li class="nav-item {% if first=='ok'%} active {% endif %}">
+                <a class="active" data-toggle="tab" role="tab" id="homes" href="#home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab"  role="tab" id="images" href="#image">images</a>
+                <a class="active" data-toggle="tab"  role="tab" id="images" href="#image">images</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab"  role="tab"  id="paging" href="#uploading_down">uploading_down</a>
+           <!-- <li class="nav-item {% if result=='ok' %} active {%  endif %}"> -->
+            <li class="nav-item  ">
+                <a class="active" data-toggle="tab"  role="tab"  id="paging" href="#uploading_down">uploading_down</a>
             </li>
         </ul>
         <!-- 第一菜单 -->
         <div class="tab-content">
-            <div id="home" class="container tab-pane active"><br>
+            <div id="home" class="container tab-pane {% if first=='ok' %} active {% endif %}"><br>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8" style="margin: 0 auto">
@@ -93,6 +94,7 @@
                             <img src="{{url_for('static',filename='images/9.jpg')}}" style="width: 100%;height: 95%"/>
                         </div>
                     </div>
+                    <!--分页 -->
                     <div class="row" >
                         <ul class="pagination" style="margin: auto;">
                             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
@@ -105,18 +107,41 @@
                 </div>
             </div>
 
-            <!-- 第三菜单 -->
-            <div id="uploading_down" class="container tab-pane fade"><br>
-                <div class="container">
-                    <div class="row">
-                        {% block paging %}{% endblock %}上传下载功能页
-                    </div>
+            <!-- 第三菜单
+            <div id="uploading_down" class="container tab-pane  fade {% if result=='ok'or result=='flase' %} active {% endif %} "><br>-->
+            <div id="uploading_down" class="container tab-pane  fade "><br>
+                <div class="container" style="text-align: center">
+
+                    <form id="form1"  method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <label >hostname:
+                                <input type="text" name="hostname">
+                            </label>
+                        </div>
+                        <div>
+                            <label >是否覆盖:
+                                <input type="checkbox" name="checkbox">
+                            </label>
+                        </div>
+                        <div>
+                            <label >目标路径:
+                                <input type="text" name="path">
+                            </label>
+                        </div>
+                        <div class="row">
+                            <input type="file" name="file" >
+                        </div>
+                        <div class="row">
+                            <button type="button" onclick="ajaxform()">提交</button>
+                        </div>
+                    </form>
+
+                        {% block paging %}{% endblock %}
+
                 </div>
             </div>
         </div>
-
-    {% block main %}{% endblock %}
+                {% block main %}{% endblock %}
         </div>
 
-    </body>
 </html>

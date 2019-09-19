@@ -1,4 +1,4 @@
-from flask import Flask , request , sessions , g ,url_for , abort , render_template ,flash,redirect,session
+from flask import Flask , request , sessions , g ,url_for , abort , render_template ,flash,redirect,session,jsonify
 import config
 import os
 from forms import RegistForm
@@ -14,7 +14,6 @@ app.config.from_object(config)
 db = SQLAlchemy(app)
 db.create_all()
 # login_manager.init_app(app)
-
 @app.route('/',methods=["GET"])
 def index():
     if session.get("username"):
@@ -49,52 +48,44 @@ def login():
             g.user = user
             session["username"]=telephone
             print("session type:",type(telephone))
-
-
-            return render_template('index.html',username=user.username)
+            first='ok'
+            print(first)
+            return redirect(url_for('home',username=user.username,first=first))
         else:
-            return u'用户名或密码错误!'
+            return u'用户名或密码错误=!'
 
-@app.route('/home/',methods=["POST","GET"])
-def home():
-    try:
-        if session.get('username'):
-            return  render_template('index.html')
-    except KeyError as e:
-        print(e)
-        return render_template('login.html')
+@app.route('/home/<string:username>',methods=["POST","GET"])
+def home(username):
+    print(username)
+    return render_template('uploading.html',username=username)
 
-@app.route('/images/',methods=["GET","POST"])
-def images():
-    print("login的数据函数:",user.username)
-    return render_template('index.html')
-# @app.route('/regist/',methods=['GET','POST'])
-# def regist():
-#     if request.method == 'GET':
-#         return render_template('regist.html')
-#     else:
-#         form = RegistForm(request.form)
-#         if form.validate():
-#             telephone = form.telephone.data
-#             username = form.username.data
-#             password = form.password1.data
-#             user = UserModel(telephone=telephone,username=username,password=password)
-#             db.session.add(user)
-#             db.session.commit()
-#             return redirect(url_for('login'))
-#
-# @app.route('/test/',methods=['POST'])
-# def test():
-#     if request.method == 'POST':
-#         f = request.files['file']
-#         # f.save(r'D:\\%s'% f.filename)
-#         return 'ok'
-#     else:
-#         return redirect(request.url)
-#
-# @app.route('/home/',methods=['GET','POST'])
-# def home():
-#     return render_template('index.html')
+@app.route('/ajax/',methods=["POST","GET"])
+def ajax():
+    if request.method == 'GET':
+        print("ajax get")
+        return redirect(url_for('home'))
+    else:
+        print("ajax post")
+        hostname = request.form.get("hostname")
+        checkbox = request.form.get("checkbox")
+        path = request.form.get("path")
+        file = request.files['file']
+        filename = file.filename
+        if not os.path.exists(path):
+            os.makedirs(path)
+        if file:
+            try:
+                file_path = os.path.join(path,filename)
+                print("file_path:",file_path)
+                file.save(file_path)
+            except Exception as e:
+                print(e,"添加失败")
+                result = "flase"
+                return jsonify({"success":404})
+            print("添加成功")
+            result = "ok"
+            return jsonify({"success":200})
 
 if __name__ == '__main__':
     app.run(port=5000,host='0.0.0.0')
+

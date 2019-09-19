@@ -3,5 +3,31 @@
 {% block title %}
     上传/下载
 {% endblock %}
-{% block paging %}uploading_down.html{% endblock %}
-{% block main %}{% endblock %}
+{% block head %}
+<script type="text/javascript">
+            function ajaxform() {
+                var form = new FormData(document.getElementById('form1'));
+                $.ajax({
+                    url:"{{url_for('ajax')}}",
+                    type:"post",
+                    data:form,
+                    dataType:'json',
+                    processData:false,
+                    contentType:false,
+                    success:function (data) {
+                        document.getElementById("ajax").innerHTML=data.success;
+                        },
+                    error:function (e) {
+                        document.getElementById("ajax").innerHTML=e;
+                    }
+                })
+            }
+        </script>
+{% endblock %}
+{% block user %}
+    {{ username }}
+{% endblock %}
+
+{% block main %}
+    <h1 id="ajax"></h1>
+{% endblock %}

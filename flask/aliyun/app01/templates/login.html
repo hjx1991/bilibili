@@ -7,38 +7,36 @@
     <script src="../static/js/jquery-3.4.1.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../static/css/login.css">
-
+    <script type="text/javascript">
+        // function test() {
+        //     var test = new FormData(document.getElementById("test"));
+        //     alert(test);
+        // }
+    </script>
 </head>
 <body>
     <div id="container" class="container">
-        <div id='row' class="row" class="text-right" >
-            <div  >
-                <label></label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-4" id="login">
-            </div>
-            <div class="col-md-4  col-md-offset-8">
-                <form class="form-horizontal" role="form" action="/login/" method="post">
+        <div class="row" >
+            <div class="col-md-4  col-md-offset-8" id="login" >
+                <form class="form-horizontal" role="form" action="/login/"  id="test" method="post">
+                    <br><br><br><br><br>
                     <div class="form-group">
-                        <label for="firstname" class="col-sm-2 control-label">name</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="firstname" name="telephone"
-                                   placeholder="请输入手机号码">
+                        <div class="col-sm-6">
+                            <label for="label_input" class="form-inline">name:</label>
+                                <input type="text" id="label_input" class="form-control" name="telephone" placeholder="请输入手机号码">
+
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="lastname" class="col-sm-2 control-label">password</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="lastname" name="password"
-                                   placeholder="请输入密码">
+                        <div class="col-sm-6">
+                            <label for="input_label" class="form-inline">password:</label>
+                                <input id="input_label" type="password" class="form-control"  name="password" placeholder="请输入密码">
                         </div>
                     </div>
                     <br>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-primary">登录</button>
+                            <button type="submit" class="btn btn-primary" onclick="test()">登录</button>
                             <a type="submit" href="#"  role="button" class="btn btn-default">注册</a>
                         </div>
                     </div>
